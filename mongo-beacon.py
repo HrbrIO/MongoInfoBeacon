@@ -23,8 +23,8 @@ except:
 config.read('mongo-beacon.ini')
 
 apiKey = config['apiKey']['apikey']
-beaconVersionId = config['beaconVersionId']['beaconversionid']
 appVersionId = config['appVersionId']['appversionid']
+beaconVersionId = config['default']['beaconversionid']
 beaconMessageType = config['default']['beaconmessagetype']
 run_interval = int(config['default']['run_interval'])
 if config['default']['beaconinstanceid'] == 'hostname':

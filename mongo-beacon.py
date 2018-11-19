@@ -46,7 +46,7 @@ while True:
             body={}
             for i in range(len(members)):
                     member = members[i]
-                    # =these line replaces the dots with dashes for JSON
+                    # =this line replaces the dots with dashes for JSON
                     replica = member["name"].replace(".","-")
                     if member["stateStr"] == "PRIMARY":
                         isPrimary = 1

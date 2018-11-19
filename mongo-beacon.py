@@ -10,7 +10,7 @@ import configparser
 from pymongo import MongoClient
 from configparser import ConfigParser
 
-config: ConfigParser = configparser.ConfigParser()
+config = ConfigParser()
 
 #Read the inifile
 

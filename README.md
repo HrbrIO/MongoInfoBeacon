@@ -40,7 +40,7 @@ An example JSON options file is shown below.
 | run_interval | How often in seconds the mongo-beacon will check mongo's replica status | defaults to 60 seconds|
 | beaconmessagetype| This is a critical field for foghorns and views.  It let's harbor know what type of data is being sent in the beacon message. | defaults to `MONGOINFO`|
 | beaconinstanceid | Your chosen beacon instance ID (device or system identifier) or enter `hostname` to use the hostname of your system| no, defaults to `hostname`|
-|
+
 
 ## Summary Info
 

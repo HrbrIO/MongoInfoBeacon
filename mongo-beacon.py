@@ -40,7 +40,7 @@ while True:
     rsstatus = client.admin.command('replSetGetStatus')
 
     members = rsstatus["members"]
-    print(members)
+    #print(members)
 
     def list_members():
             body={}
@@ -59,7 +59,7 @@ while True:
 
     body = list_members()
 
-    myurl = "https://harbor-stream.herokuapp.com/beacon"
+    myurl = "https://harbor-stream-staging.herokuapp.com/beacon"
     headers = {
         'Content-Type': 'application/json',
         'apiKey': apiKey,

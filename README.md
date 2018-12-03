@@ -8,7 +8,7 @@ So we wanted to write a really light beacon that would check the status of our M
 
 1. You must have ```python```, ```pip``` and ```pipenv``` installed.
     * You can use other package management systems but you may have to configure yourself.
-2. ``mongo`` becaond was designed for `python3` but seems to work just fine with `python2`.
+2. ``mongo`` becaon was designed for `python3` but seems to work just fine with `python2`.
 
 
 ## Usage

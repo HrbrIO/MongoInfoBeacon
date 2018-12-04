@@ -26,7 +26,29 @@ So we wanted to write a really light beacon that would check the status of our M
 
 ## Configuration Options (mongo-beacon.ini)
 
-These are the fields in the `mongo-beacon.ini`
+These are the fields in the `mongo-beacon.ini`:
+
+```css
+[apiKey]
+apikey = YOUR_API_KEY
+
+[appVersionId]
+appversionid = YOUR_APP_VERSION_ID
+
+[mongoConnectionString]
+#i.e. mongodb://yourusername:youruserpasswrod@example.com:27017/admin?ssl=true
+mongoConnectionString = YOUR_MONGO_CONNECTION_STRING
+
+[default]
+#You can change this if you make modifications to the beacon or leave the same if you like my name
+beaconversionid = mongo-beacon:0.1.0
+#In Seconds
+run_interval = 60
+#This can be whatever you want but it's easier for Foghrons and Views if it is consistent across systems
+beaconmessagetype = MONGOINFO
+# If you leave this as hostname it will use the system hostname
+beaconinstanceid = hostname```
+
 
 |     Key     |      Value     |  Required |
 |-------------|----------------|-----------|

@@ -1,4 +1,4 @@
-Â# mongo-beacon
+# mongo-beacon
 ### A simple python beacon for checking Mongo status.
 
 So we wanted to write a really light beacon that would check the status of our Mongo replica sets.  We will keep adding to this but for now it's solely used for sending beacon messages to let us know which server is primary in the replica set.
@@ -28,7 +28,7 @@ So we wanted to write a really light beacon that would check the status of our M
 
 ## Configuration Options (mongo-beacon.ini)
 
-
+These are the fields in the `mongo-beacon.ini`
 
 |     Key     |      Value     |  Required |
 |-------------|----------------|-----------|
@@ -41,26 +41,9 @@ So we wanted to write a really light beacon that would check the status of our M
 | beaconinstanceid | Your chosen beacon instance ID (device or system identifier) or enter `hostname` to use the hostname of your system| no, defaults to `hostname`|
 
 
-## Summary Info
-
-| Item | Value | Comments |
-|------|-------|----------|
-| Beacon Version ID |  mongo-beacon:0.1.0 | You can change this but make sure you match it in Harbor  |
-| Beacon Message Type(s) | MONGOINFO | This beacon only has one Beacon Message Type. |
-| Beacon Instance ID | Defaults to `hostname`| This allows you to identify the system that sent the beacon |
-
 ## Beacon Message Format
 
 Beacon messasges sent by this app follow the following data schema:
 
 
-    "data": {
-        "your-replica-server-1": {
-          "isPrimary": 1
-        },
-        "your-replica-server-2": {
-          "isPrimary": 0
-        },
-        "your-replica-server-3": {
-          "isPrimary": 0
-        }
+    s

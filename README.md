@@ -13,17 +13,15 @@ So we wanted to write a really light beacon that would check the status of our M
 2. ``mongo`` becaon was designed for `python3` but seems to work just fine with `python2`.
 
 
-## Usage
+## Installation
 
 1. Clone the repo from Github.
 2. Run `pipenv install` from you mongo-beacon directory to install the dependencies and create a virtual environment.
 3. Copy the `example.ini` to `mongo-beacon.ini`.
   * The mongo-beacon.ini file has sensitive information so it's ignored as part of the repo.
 4. Configure `mongo-beacon.ini` as shown below.
-4. Register the `beaconVersionId` in the App in Harbor. The `beaconVersionId` must match the `beaconVersionId` in the in `mongo-beacon.ini`.
-6.     For directions on how to register a mongo beacon cheack out the [Harbor Quick Start Guide](https://docs.hrbr.io/quick-start-guide/#registering-the-beacon).
-5. From the directory you installed the repo run `pipenv run python3 mongo-beacon-py`
-6. If you would like to run mongo-beacon as a Linux service we've included a sample systemd service file `example-mongo-beacon.service`.  Here is an easy [guide](https://www.raspberrypi-spy.co.uk/2015/10/how-to-autorun-a-python-script-on-boot-using-systemd/) for running a python script as a service.
+5. Register the `beaconVersionId` in the App in Harbor. The `beaconVersionId` must match the `beaconVersionId` in the in `mongo-beacon.ini`.
+6. For directions on how to register a mongo beacon cheack out the [Harbor Quick Start Guide](https://docs.hrbr.io/quick-start-guide/#registering-the-beacon).
 
 
 ## Configuration Options (mongo-beacon.ini)
@@ -44,6 +42,23 @@ These are the fields in the `mongo-beacon.ini`
 ## Beacon Message Format
 
 Beacon messasges sent by this app follow the following data schema:
+```css
+"data": {
+    "wharf-staging-hrbr-io:27017": {
+      "isPrimary": 1
+    },
+    "wharf-staging-1-hrbr-io:27017": {
+      "isPrimary": 0
+    },
+    "wharf-staging-2-hrbr-io:27017": {
+      "isPrimary": 0
+    }
+  ```
+## Run and Schedule the `mongo-info` Beacons
 
+* From the directory you installed the repo run `pipenv run python3 mongo-beacon-py`.
+* If you would like to run mongo-beacon as a Linux service we've included a sample systemd service file `example-mongo-beacon.service`.  Here is an easy [guide](https://www.raspberrypi-spy.co.uk/2015/10/how-to-autorun-a-python-script-on-boot-using-systemd/) from for running a python script as a service.
 
-    s
+## Test
+
+Go to the the [Cloud Harbor Apps Page](https://cloud.hrbr.io/#!/apps/list) and select the `go to developer console` to check to see if you beacon is actually sending messages.

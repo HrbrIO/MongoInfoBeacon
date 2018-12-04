@@ -47,7 +47,8 @@ run_interval = 60
 #This can be whatever you want but it's easier for Foghrons and Views if it is consistent across systems
 beaconmessagetype = MONGOINFO
 # If you leave this as hostname it will use the system hostname
-beaconinstanceid = hostname```
+beaconinstanceid = hostname
+```
 
 
 |     Key     |      Value     |  Required |

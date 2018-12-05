@@ -67,13 +67,13 @@ beaconinstanceid = hostname
 Beacon messasges sent by this app follow the following data schema:
 ```css
 "data": {
-    "wharf-staging-hrbr-io:27017": {
+    "your-db-1:27017": {
       "isPrimary": 1
     },
-    "wharf-staging-1-hrbr-io:27017": {
+    "your-db-2:27017: {
       "isPrimary": 0
     },
-    "wharf-staging-2-hrbr-io:27017": {
+    "your-db-3:27017": {
       "isPrimary": 0
     }
   ```

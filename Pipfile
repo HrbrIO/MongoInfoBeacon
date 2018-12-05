@@ -9,6 +9,3 @@ verify_ssl = true
 requests = "*"
 pymongo = "*"
 configparser = "*"
-
-[requires]
-python_version = "3.6"

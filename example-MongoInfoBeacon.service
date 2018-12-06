@@ -3,11 +3,11 @@ Description=MongoInfoBeacon service
 After=syslog.target network.target mongodb.service
 
 [Service]
-User=YOUR_USER_NAME
+User=root
 Restart=always
 Type=simple
-WorkingDirectory=/DIRECTORY_BEACON_INSTALLED_IN/MongoInfoBeacon
-ExecStart=/usr/local/bin/pipenv run python3 /DIRECTORY_BEACON_INSTALLED_IN/MongoInfoBeacon/MongoInfoBeacon.py
+WorkingDirectory=/opt/beacons/MongoInfoBeacon
+ExecStart=/usr/local/bin/pipenv run python3 /opt/beacons/MongoInfoBeacon/MongoInfoBeacon/MongoInfoBeacon.py
 
 [Install]
 WantedBy=multi-user.target

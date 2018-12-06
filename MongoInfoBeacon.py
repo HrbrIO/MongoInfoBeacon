@@ -59,7 +59,7 @@ while True:
 
     body = list_members()
 
-    myurl = "https://harbor-stream-staging.herokuapp.com/beacon"
+    myurl = "https://harbor-stream.herokuapp.com/beacon"
     headers = {
         'Content-Type': 'application/json',
         'apiKey': apiKey,

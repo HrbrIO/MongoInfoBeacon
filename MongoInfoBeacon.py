@@ -49,9 +49,9 @@ while True:
                     # =this line replaces the dots with dashes for JSON
                     replica = member["name"].replace(".","-")
                     if member["stateStr"] == "PRIMARY":
-                        isPrimary = 1
+                        isPrimary = True
                     else:
-                        isPrimary = 0
+                        isPrimary = False
                     body[replica] = {"isPrimary" : isPrimary}
             return body
 

@@ -59,6 +59,7 @@ while True:
 
     body = list_members()
 
+    # Change to "https://harbor-stream-staging.herokuapp.com/beacon to go to cloud-staging"
     myurl = "https://harbor-stream.herokuapp.com/beacon"
     headers = {
         'Content-Type': 'application/json',

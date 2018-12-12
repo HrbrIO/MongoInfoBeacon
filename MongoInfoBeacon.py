@@ -7,7 +7,6 @@ import configparser
 from pprint import pprint
 from configparser import ConfigParser
 from pymongo import MongoClient
-#import pdb
 
 config = ConfigParser()
 
@@ -36,7 +35,6 @@ def master_optime(members):
     moptime = 0
     for i in range(len(members)):
         member = members[i]
-        #pdb.set_trace()
         if member["state"] == 1:
             timestamp, temp_moptime = str(member['optime']['ts']).split('(')
             moptime, term = temp_moptime.split(',')

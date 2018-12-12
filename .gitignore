@@ -1,1 +1,3 @@
-MongoInfoBeacon.ini
+MongoInfoBeacon.ini*
+MongoInfoBeacon.py-staging
+MongoInfoBeacon.py-production

@@ -41,7 +41,7 @@ def master_optime(members):
     return int(moptime)
 
 def send_beacon(message):
-    myurl = "https://harbor-stream.herokuapp.com/beacon"
+    myurl = "https://harbor-stream.hrbr.io/beacon"
     headers = {
         'Content-Type': 'application/json',
         'apiKey': apiKey,

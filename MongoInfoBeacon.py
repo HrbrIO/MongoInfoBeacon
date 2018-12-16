@@ -40,7 +40,7 @@ def master_optime(members):
             moptime, term = temp_moptime.split(',')
     return int(moptime)
 
-def send_beacon(message):
+def send_beacon(message, apiKey, beaconVersionId, appVersionId, beaconInstanceId, beaconMessageType):
     myurl = "https://harbor-stream.hrbr.io/beacon"
     headers = {
         'Content-Type': 'application/json',
@@ -53,8 +53,8 @@ def send_beacon(message):
     print("Beacon Header: ")
     pprint(headers)
     print("Beacon Body: ")
-    pprint(body)
-    response = requests.post(myurl, headers = headers, json=body)
+    pprint(message)
+    response = requests.post(myurl, headers = headers, json=message)
 
 def status_list(members):
     body={}
@@ -83,6 +83,6 @@ while keep_running:
     rsstatus = client.admin.command('replSetGetStatus')
     members_list = rsstatus["members"]
     body = status_list(members_list)
-    send_beacon(body)
+    send_beacon(body, apiKey, beaconVersionId, appVersionId, beaconInstanceId, beaconMessageType)
     time.sleep(run_interval)
     keep_running = True
